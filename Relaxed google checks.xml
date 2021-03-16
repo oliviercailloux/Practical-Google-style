@@ -14,6 +14,8 @@
     To suppress certain violations please review suppression filters.
 
     Authors: Max Vetrenko, Ruslan Diachenko, Roman Ivanov.
+    
+    Modified by Olivier Cailloux; available at https://github.com/oliviercailloux/Relaxed-google-style
  -->
 
 <module name = "Checker">
@@ -247,7 +249,6 @@
     </module>
     <module name="Indentation">
       <property name="basicOffset" value="2"/>
-      <property name="braceAdjustment" value="2"/>
       <property name="caseIndent" value="2"/>
       <property name="throwsIndent" value="4"/>
       <property name="lineWrappingIndentation" value="4"/>
