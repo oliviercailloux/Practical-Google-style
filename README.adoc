@@ -2,9 +2,11 @@
 
 A https://checkstyle.org/[checkstyle] configuration file based on Google style, somewhat modified for my taste.
 
-https://github.com/oliviercailloux/Relaxed-google-style/blob/c0aa0f55e4ea5966786746ee28428c95fa7d9a6d/google_checks.xml[Original file] imported from checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources], then modified manually.
+https://github.com/oliviercailloux/Relaxed-google-style/blob/c0aa0f55e4ea5966786746ee28428c95fa7d9a6d/google_checks.xml[Original file] imported from checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources], then modified manually. The modifications aim at “relaxing” the checks, except that I changed the global severity level at Error instead of Warning.
 
 == Modifications
 
+* Renamed file to avoid confusions with the original style
 * https://checkstyle.org/config_misc.html#Indentation[`braceAdjustment`] disabled because https://github.com/checkstyle/checkstyle/issues/9326[also applies] to braces at the start of a line and after an end of statement, which I do not want.
+* Put the global severity level at Error instead of Warning, overridden for the following Javadoc related modules: `NonEmptyAtclauseDescription`, `JavadocParagraph`, `MissingJavadocMethod`, `MissingJavadocType`. The official Google style https://google.github.io/styleguide/javaguide.html#s7.3-javadoc-where-required[requires those checks], but I do not want those to break my build: while developing, I do not insist on having complete and nicely formatted Javadoc, which can be a loss of time when we are still unsure about the definitive form of an API. (However, these warnings are relevant when aiming at publishing an API.)
 
