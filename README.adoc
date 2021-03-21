@@ -1,6 +1,6 @@
 = Relaxed google style
 
-A https://checkstyle.org/[Checkstyle] configuration file based on https://google.github.io/styleguide/javaguide.html[Google Java Style Guide], somewhat modified for my taste.
+A https://checkstyle.org/[Checkstyle] configuration file based on https://google.github.io/styleguide/javaguide.html[Google Java Style Guide], slightly modified (see link:#Modifications[below]).
 
 I initially imported the Checkstyle https://github.com/oliviercailloux/Relaxed-google-style/blob/c0aa0f55e4ea5966786746ee28428c95fa7d9a6d/google_checks.xml[configuration file] for Google Style Guide (from the Checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources]), then modified the file manually. The modifications (details below) aim at “relaxing” the checks, except that I set the global severity level to `error` instead of `warning`.
 
