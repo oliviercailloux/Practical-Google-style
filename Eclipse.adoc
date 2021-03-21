@@ -1,6 +1,6 @@
 = Eclipse
 
-Here is how to configure Eclipse so that it will format your code according to the Google Java Style Guide.
+Here is how to configure Eclipse so that it will format your code according to the https://google.github.io/styleguide/javaguide.htm[Google Java Style Guide].
 
 == Method 1: Configure Eclipse formatter
 Download https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml[eclipse-java-google-style.xml]. 
