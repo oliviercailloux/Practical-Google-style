@@ -8,27 +8,13 @@ I initially imported the Checkstyle https://github.com/oliviercailloux/Relaxed-g
 Download https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Relaxed%20google%20checks.xml[`Relaxed google checks.xml`], put it at your project root.
 Add the plugin `maven-checkstyle-plugin` to your POM, configured as in https://github.com/oliviercailloux/JARiS/blob/22b629defe095b41d43fbb9c66894c37f77c4d02/pom.xml#L19-L40[here], in order to fail your build in case of bad formatting. (The check will run https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html[by default] during the http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference[verify] phase.)
 
-== Eclipse
-Here is how to configure Eclipse so that it will format your code according to the Google Java Style Guide.
-
-//http://www.practicesofmastery.com/post/eclipse-google-java-style-guide/
-Download https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml[eclipse-java-google-style.xml]. 
-Import it in Eclipse (from Eclipse preferences, `Java` / `Code Style` / `Formatter`).
-
-Edit the formatter setting for `Blank Lines` / `Blank lines within compilation unit` / `Between import groups`, set to one blank line. Also (as a matter of personal preference but https://google.github.io/styleguide/javaguide.html#s4.1.3-braces-empty-blocks[compatible] with Google Java Style), I suggest to change: `New Lines` / `Keep braced code on one line` / `Method declaration` to `Never`.
-
-Back to Eclipse preferences, at `Java` / `Code Style` / `Organize Imports`, remove all groups, so that Eclipse will not insert unwanted blank lines within your import blocks.
-
-=== Explanation
-Google Java Style Guide, https://google.github.io/styleguide/javaguide.html#s3.3.3-import-ordering-and-spacing[3.3.3 Ordering and spacing], requires that static imports come together first in a single block, then a blank line, then non-static imports in a single block. But the related formatter settings in the `eclipse-java-google-style.xml` file is https://github.com/google/styleguide/issues/273[incorrect].
-
-Also, the Checkstyle configuration file for Google Style Guide, relaxed or not, (correctly) requires separator between static and non-static imports (rule https://checkstyle.org/config_imports.html#CustomImportOrder[`CustomImportOrder`], property `separateLineBetweenGroups`), so if you do not correct this in Eclipse’s formatter, it will be incompatible with Checkstyle’s requirement.
-
 == Modifications
-
 * Renamed file to distinguish it from the original style
 * https://checkstyle.org/config_misc.html#Indentation[`braceAdjustment`] disabled because https://github.com/checkstyle/checkstyle/issues/9326[also applies] to braces at the start of a line and after an end of statement, which I do not want.
 * Put the global severity level at `error` (the Checkstyle default) instead of `warning` (which was explicitly set in the original goole checks configuration file), overridden for the following Javadoc related modules: `NonEmptyAtclauseDescription`, `JavadocParagraph`, `MissingJavadocMethod`, `MissingJavadocType`. The Google Style Guide https://google.github.io/styleguide/javaguide.html#s7.3-javadoc-where-required[requires those checks], but I do not want those to break my build: while developing, I do not insist on having complete and nicely formatted Javadoc, which can be a loss of time when we are still unsure about the definitive form of an API. (However, these warnings are relevant when aiming at publishing an API.)
 
 ⇒ https://github.com/oliviercailloux/Relaxed-google-style/compare/c0aa0f5..master#diff-3ec4477dcb9822e385df285c83b0e83b6d204b89447437359ae2a364f842396a[diff]
+
+== See also
+Configure link:Eclipse.adoc[Eclipse]
 
