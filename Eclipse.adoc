@@ -14,7 +14,7 @@ Google Java Style Guide, https://google.github.io/styleguide/javaguide.html#s3.3
 
 Also, the Checkstyle configuration file for Google Style Guide, relaxed or not, (correctly) requires separator between static and non-static imports (rule https://checkstyle.org/config_imports.html#CustomImportOrder[`CustomImportOrder`], property `separateLineBetweenGroups`), so if you do not correct this in Eclipse’s formatter, it will be incompatible with Checkstyle’s requirement.
 
-== Method 2: Configure Eclipse formatter and many other things
+== Method 2: Configure Eclipse formatter and more
 You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle + block + braced” formatter style configured exactly as when following Method 1, and also tweak a few other aspects of Eclipse.
 
 == References
