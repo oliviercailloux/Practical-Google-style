@@ -5,8 +5,7 @@ A https://checkstyle.org/[Checkstyle] configuration file based on https://google
 I initially imported the Checkstyle https://github.com/oliviercailloux/Relaxed-google-style/blob/c0aa0f55e4ea5966786746ee28428c95fa7d9a6d/google_checks.xml[configuration file] for Google Style Guide (from the Checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources]), then modified the file manually. The modifications (details below) aim at “relaxing” the checks, except that I set the global severity level to `error` instead of `warning`.
 
 == Maven
-Download https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Relaxed%20google%20checks.xml[`Relaxed google checks.xml`], put it at your project root.
-Add the plugin `maven-checkstyle-plugin` to your POM, configured as in https://github.com/oliviercailloux/JARiS/blob/22b629defe095b41d43fbb9c66894c37f77c4d02/pom.xml#L19-L40[here], in order to fail your build in case of bad formatting. (The check will run https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html[by default] during the http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference[verify] phase.)
+Add the plugin `maven-checkstyle-plugin` to your POM, configured as in https://github.com/oliviercailloux/JARiS/blob/7af1071e4dc8ebfb96371f9afa4db8bc78dd34f9/pom.xml#L19-L41[here], in order to fail your build in case of bad formatting. (The check will run https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html[by default] during the http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference[verify] phase.)
 
 == Modifications
 * Renamed file to distinguish it from the original style
