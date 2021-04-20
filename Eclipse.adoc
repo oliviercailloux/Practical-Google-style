@@ -2,7 +2,11 @@
 
 Here is how to configure Eclipse so that it will format your code according to the https://google.github.io/styleguide/javaguide.htm[Google Java Style Guide].
 
-== Method 1: Configure Eclipse formatter
+== Format code using the Google Java Style Guide
+. Configure the Eclipse formatter: use method 1 or method 2, below
+. Apply the newly configured formatter globally or to a specific project: see Vogella’s https://www.vogella.com/tutorials/Eclipse/article.html#code-formatter[tutorial]
+
+== Method 1: Configure Eclipse formatter and tweak it manually
 Download https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml[eclipse-java-google-style.xml]. 
 Go to Eclipse preferences, `Java` / `Code Style` / `Formatter`, and import that file.
 
@@ -10,10 +14,13 @@ Edit the formatter setting for `Blank Lines` / `Blank lines within compilation u
 
 Back to Eclipse preferences, at `Java` / `Code Style` / `Organize Imports`, remove all groups, so that Eclipse will not insert unwanted blank lines within your import blocks.
 
-== Explanation
+.Explanation
+[%collapsible]
+====
 Google Java Style Guide, https://google.github.io/styleguide/javaguide.html#s3.3.3-import-ordering-and-spacing[3.3.3 Ordering and spacing], requires that static imports come together first in a single block, then a blank line, then non-static imports in a single block. But the related formatter settings in the `eclipse-java-google-style.xml` file is https://github.com/google/styleguide/issues/273[incorrect].
 
 Also, the Checkstyle configuration file for Google Style Guide, relaxed or not, (correctly) requires separator between static and non-static imports (rule https://checkstyle.org/config_imports.html#CustomImportOrder[`CustomImportOrder`], property `separateLineBetweenGroups`), so if you do not correct this in Eclipse’s formatter, it will be incompatible with Checkstyle’s requirement.
+====
 
 == Method 2: Configure Eclipse formatter and more
 You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle + block + braced” formatter style configured exactly as when following Method 1, and also tweak a few other aspects of Eclipse.
