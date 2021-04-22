@@ -12,7 +12,8 @@ void sort(Path path) throws IOException {
 	assert lines.get(1).startsWith("<profiles") : lines.get(1);
 	assert lines.get(2).trim().startsWith("<profile") : lines.get(2);
 	var settingsLines = lines.subList(3, size - 2);
-	assert settingsLines.stream().allMatch(s -> s.trim().startsWith("<setting id=\"org.eclipse.jdt.core."));
+	var notSettings = settingsLines.stream().filter(s -> !s.trim().startsWith("<setting id=\"org.eclipse.jdt.core.")).collect(Collectors.toList());
+	assert notSettings.isEmpty() : "Not settings: " + notSettings;
 	assert lines.get(size - 2).trim().equals("</profile>") : lines.get(size - 2);
 	assert lines.get(size - 1).trim().equals("</profiles>") : lines.get(size - 1);
 
