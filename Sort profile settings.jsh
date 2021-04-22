@@ -2,10 +2,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Files;
 import java.util.Collections;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
-
-var LOGGER = Logger.getGlobal();
 
 void sort(Path path) throws IOException {
 	var lines = Files.readAllLines(path);
@@ -24,7 +21,7 @@ void sort(Path path) throws IOException {
 	var trimmed = lines.stream().map(String::trim).collect(Collectors.toList());
 	Files.write(path, trimmed);
 	
-	LOGGER.info("Sorted " + path + ".");
+	System.out.println("Sorted " + path + ".");
 }
 
 void main() throws Exception {
