@@ -21,7 +21,7 @@ The Eclipse formatter configuration file provided here is a modified version of 
 .Explanation
 [%collapsible]
 ====
-I initially imported the configuration file provided in Google’s styleguide repository (https://github.com/google/styleguide/blob/505ba68c74eb97e6966f60907ce893001bedc706/eclipse-java-google-style.xml[this version], to be precise), imported it into Eclipse and exported it again so as to adapt its format to recent Eclipse versions, sorted the settings in it (to ease comparisons), then https://github.com/oliviercailloux/Relaxed-google-style/compare/c63af7..master#diff-94dbce17ac0d35703ff73ae1f3e30a15235150fa6a7224e0e0bb32b792b4ad70[modified] the file manually. 
+I initially downloaded the configuration file provided in Google’s styleguide repository (https://github.com/google/styleguide/blob/505ba68c74eb97e6966f60907ce893001bedc706/eclipse-java-google-style.xml[this version], to be precise), imported it into Eclipse and exported it again so as to adapt its format to recent Eclipse versions, sorted the settings in it (to ease comparisons), then https://github.com/oliviercailloux/Relaxed-google-style/compare/c63af7..master#diff-94dbce17ac0d35703ff73ae1f3e30a15235150fa6a7224e0e0bb32b792b4ad70[modified] the file manually. 
 
 * Google Java Style Guide, https://google.github.io/styleguide/javaguide.html#s3.3.3-import-ordering-and-spacing[3.3.3 Ordering and spacing], requires that static imports come together first in a single block, then a blank line, then non-static imports in a single block. But the related formatter settings (`blank_lines_between_import_groups`, corresponding to `Blank Lines` / `Blank lines within compilation unit` / `Between import groups` in Eclipse formatter configuration GUI) was https://github.com/google/styleguide/issues/273[incorrect] in the original `eclipse-java-google-style.xml` file, so I changed it.
 ** Also, the Checkstyle configuration file for Google Style Guide (original or mine) requires separator between static and non-static imports (rule https://checkstyle.org/config_imports.html#CustomImportOrder[`CustomImportOrder`], property `separateLineBetweenGroups`), so it is required to correct this in Eclipse’s formatter for compliance with Checkstyle’s requirement.
@@ -31,6 +31,15 @@ I initially imported the configuration file provided in Google’s styleguide re
 
 Note that I renamed the file and named the formatter configuration `GoogleStyle patched` to distinguish them from the original ones.
 ====
+
+== Sort and compare your settings
+Here is how to compare your formatter settings to these ones (or any other ones), assuming you modified them manually using Eclipse’s preference GUI.
+
+* From Eclipse preferences: `Java` / `Code Style` / `Formatter` / `Edit` / `Export…`, save it as `Untitled.xml` (for example)
+* Download this repository’s https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Sort%20profile%20settings.jsh[Sort profile settings] jshell script
+* Run `jshell -R-ea "-R-Dfile=Untitled.xml" --startup "Sort profile settings.jsh"`
+
+You obtain an `Untitled.xml` file with sorted settings elements, which you can then compare using any diff program to other similarly sorted Eclipse formatter configuration files. (It seems to me that Eclipse’s export ordering is not deterministic, hence the required sorting step.)
 
 == References
 Some relevant http://www.practicesofmastery.com/post/eclipse-google-java-style-guide/[screenshots]
