@@ -7,7 +7,7 @@
 <setting id="org.eclipse.jdt.core.formatter.align_variable_declarations_on_columns" value="false"/>
 <setting id="org.eclipse.jdt.core.formatter.align_with_spaces" value="false"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_additive_operator" value="16"/>
-<setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_enum_constant" value="0"/>
+<setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_enum_constant" value="49"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_field" value="49"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_local_variable" value="49"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_method" value="49"/>
@@ -31,11 +31,11 @@
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_expressions_in_array_initializer" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_expressions_in_for_loop_header" value="0"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_logical_operator" value="16"/>
-<setting id="org.eclipse.jdt.core.formatter.alignment_for_method_declaration" value="0"/>
+<setting id="org.eclipse.jdt.core.formatter.alignment_for_method_declaration" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_module_statements" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_multiple_fields" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_multiplicative_operator" value="16"/>
-<setting id="org.eclipse.jdt.core.formatter.alignment_for_parameterized_type_references" value="0"/>
+<setting id="org.eclipse.jdt.core.formatter.alignment_for_parameterized_type_references" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_parameters_in_constructor_declaration" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_record_components" value="16"/>
@@ -51,11 +51,11 @@
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_constructor_declaration" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_method_declaration" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_type_annotations" value="0"/>
-<setting id="org.eclipse.jdt.core.formatter.alignment_for_type_arguments" value="0"/>
-<setting id="org.eclipse.jdt.core.formatter.alignment_for_type_parameters" value="0"/>
+<setting id="org.eclipse.jdt.core.formatter.alignment_for_type_arguments" value="16"/>
+<setting id="org.eclipse.jdt.core.formatter.alignment_for_type_parameters" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_union_type_in_multicatch" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_after_imports" value="1"/>
-<setting id="org.eclipse.jdt.core.formatter.blank_lines_after_last_class_body_declaration" value="0"/>
+<setting id="org.eclipse.jdt.core.formatter.blank_lines_after_last_class_body_declaration" value="-1"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_after_package" value="1"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_before_abstract_method" value="1"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_before_field" value="0"/>
@@ -338,7 +338,7 @@
 <setting id="org.eclipse.jdt.core.formatter.keep_imple_if_on_one_line" value="false"/>
 <setting id="org.eclipse.jdt.core.formatter.keep_lambda_body_block_on_one_line" value="one_line_never"/>
 <setting id="org.eclipse.jdt.core.formatter.keep_loop_body_block_on_one_line" value="one_line_never"/>
-<setting id="org.eclipse.jdt.core.formatter.keep_method_body_on_one_line" value="one_line_if_empty"/>
+<setting id="org.eclipse.jdt.core.formatter.keep_method_body_on_one_line" value="one_line_never"/>
 <setting id="org.eclipse.jdt.core.formatter.keep_record_constructor_on_one_line" value="one_line_if_empty"/>
 <setting id="org.eclipse.jdt.core.formatter.keep_record_declaration_on_one_line" value="one_line_never"/>
 <setting id="org.eclipse.jdt.core.formatter.keep_simple_do_while_body_on_same_line" value="false"/>
