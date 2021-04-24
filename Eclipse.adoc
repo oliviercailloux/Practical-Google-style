@@ -12,10 +12,6 @@ Go to Eclipse preferences, `Java` / `Code Style` / `Formatter`, and import that 
 
 Back to Eclipse preferences, at `Java` / `Code Style` / `Organize Imports`, remove all groups, so that Eclipse will not insert unwanted blank lines within your import blocks.
 
-== Method 2: Configure Eclipse formatter and more
-You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle patched” formatter style configured exactly as when following Method 1, and also tweak multiple other aspects of Eclipse.
-
-== Eclipse formatter configuration file
 The Eclipse formatter configuration file provided here is a modified version of Google’s https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml[configuration file for Eclipse].
 
 .Explanation
@@ -29,8 +25,11 @@ I initially downloaded the configuration file provided in Google’s styleguide 
 * I enlarged permission to the formatter to split lines (`alignment_for_annotations_on_enum_constant`, `alignment_for_method_declaration`, `alignment_for_parameterized_type_references`, `alignment_for_type_arguments`, `alignment_for_type_parameters`): under the original configuration file, the formatter may leave lines longer than 100 characters where it is actually possible to reformat them; which Google style https://google.github.io/styleguide/javaguide.html#s4.4-column-limit[forbids]. Here is https://github.com/oliviercailloux/JARiS/compare/63a312..72bcba#diff-f20d44cbe9548b0b1617aaa663c17b78dade632ad75548e4844380516224fa8cL128-R130[an example] of a difference this makes.
 * `number_of_empty_lines_to_preserve` (configured so as to suppress vertical spacing greater than one blank line) and `blank_lines_after_last_class_body_declaration` (configured so as to suppress blank lines before closing bracket) are personal preferences. This may be subjective, but these settings are compatible with Google style (the first one even https://google.github.io/styleguide/javaguide.html#s4.6.1-vertical-whitespace[encouraged]), and I think they make sense generally.
 
-Note that I renamed the file and named the formatter configuration `GoogleStyle patched` to distinguish them from the original ones.
+I renamed the file and named the formatter configuration `GoogleStyle patched` to distinguish them from the original ones.
 ====
+
+== Method 2: Configure Eclipse formatter and more
+You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle patched” formatter style configured exactly as when following Method 1, and also tweak multiple other aspects of Eclipse.
 
 == Export your settings
 Here is how to compare your formatter settings to these ones (or any other ones), assuming you modified them manually using Eclipse’s preference GUI.
