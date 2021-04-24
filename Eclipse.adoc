@@ -32,14 +32,16 @@ I initially downloaded the configuration file provided in Google’s styleguide 
 Note that I renamed the file and named the formatter configuration `GoogleStyle patched` to distinguish them from the original ones.
 ====
 
-== Sort and compare your settings
+== Export your settings
 Here is how to compare your formatter settings to these ones (or any other ones), assuming you modified them manually using Eclipse’s preference GUI.
 
 * From Eclipse preferences: `Java` / `Code Style` / `Formatter` / `Edit` / `Export…`, save it as `Untitled.xml` (for example)
 * Download this repository’s https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Sort%20profile%20settings.jsh[Sort profile settings] jshell script
 * Run `jshell -R-ea "-R-Dfile=Untitled.xml" --startup "Sort profile settings.jsh"`
 
-You obtain an `Untitled.xml` file with sorted settings elements, which you can then compare using any diff program to other similarly sorted Eclipse formatter configuration files. (It seems to me that Eclipse’s export ordering is not deterministic, hence the required sorting step.)
+You obtain an `Untitled.xml` file with sorted settings elements, which you can then compare using any diff program to other similarly sorted Eclipse formatter configuration files. (It seems to me that Eclipse’s export ordering is not deterministic, hence the sorting step.)
+
+To transform these (or your) settings to the EPF (Eclipse Preference File) format, run `rm out.epf ; jshell -R-ea "-R-Dinput=eclipse-java-google-style patched.xml" --startup "Formatter to EPF.jsh"`.
 
 == References
 Some relevant http://www.practicesofmastery.com/post/eclipse-google-java-style-guide/[screenshots]
