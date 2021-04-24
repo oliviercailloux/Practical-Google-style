@@ -1,6 +1,6 @@
-= Practical google style
+= Practical Google style
 
-Practical tips and tricks to configure your Java project so as to apply https://google.github.io/styleguide/javaguide.html[Google Java Style Guide].
+Configuration files and practical tips and tricks to configure your Java project so as to apply https://google.github.io/styleguide/javaguide.html[Google Java Style Guide].
 
 This repository provides a https://checkstyle.org/[Checkstyle] https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Relaxed%20google%20checks.xml[configuration file]; instructions for configuring your (Maven) POM (see below); and an Eclipse formatter https://github.com/oliviercailloux/Relaxed-google-style/blob/master/eclipse-java-google-style%20patched.xml[configuration file] together with some https://github.com/oliviercailloux/Relaxed-google-style/blob/master/Eclipse.adoc[related instructions].
 
@@ -20,6 +20,6 @@ I initially imported the Checkstyle  (from the Checkstyle https://github.com/che
 ** I have however set most of the Javadoc related modules to `warning` severity. The Google Style Guide https://google.github.io/styleguide/javaguide.html#s7.3-javadoc-where-required[requires those checks], but I do not want those to break my build: while developing, I do not insist on having complete and nicely formatted Javadoc, which can be a loss of time when we are still unsure about the definitive form of an API. However, these warnings are relevant when aiming at publishing an API.
 * Essentially disabled `https://checkstyle.org/config_javadoc.html#SummaryJavadoc[SummaryJavadoc]`. I kept “forbiddenSummaryFragments” but rendered the summary existence check ineffective with a trick by considering “space” as an end-of-sentence period. As configured originally, this does not correctly implement Google’s requirements, which https://google.github.io/styleguide/javaguide.html#s7.3.4-javadoc-non-required[requests] the summary sentence only for public types. I replaced this with `https://checkstyle.org/config_javadoc.html#JavadocStyle[JavadocStyle]`, which allows for scope configuration and also checks that Javadoc effectively is there.
 
-Note that I renamed the file to distinguish it from the original style.
+I renamed the file to distinguish it from the original style.
 ====
 
