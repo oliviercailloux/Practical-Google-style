@@ -13,7 +13,7 @@ Go to Eclipse preferences, `Java` / `Code Style` / `Formatter`, and import that 
 Back to Eclipse preferences, at `Java` / `Code Style` / `Organize Imports`, remove all groups, so that Eclipse will not insert unwanted blank lines within your import blocks.
 
 == Method 2: Configure Eclipse formatter and more
-You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle + block + braced” formatter style configured exactly as when following Method 1 (TODO not updated to last version yet), and also tweak multiple other aspects of Eclipse.
+You may instead follow https://github.com/oliviercailloux/java-course/blob/master/Dev%20tools/Eclipse.adoc#configuration[these] instructions, which will add a “GoogleStyle patched” formatter style configured exactly as when following Method 1, and also tweak multiple other aspects of Eclipse.
 
 == Eclipse formatter configuration file
 The Eclipse formatter configuration file provided here is a modified version of Google’s https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml[configuration file for Eclipse].
