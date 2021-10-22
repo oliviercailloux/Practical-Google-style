@@ -15,7 +15,7 @@
 
     Authors: Max Vetrenko, Ruslan Diachenko, Roman Ivanov.
     
-    Modified by Olivier Cailloux; available at https://github.com/oliviercailloux/Relaxed-google-style
+    Modified by Olivier Cailloux; available at https://github.com/oliviercailloux/Practical-Google-style
  -->
 
 <module name = "Checker">
@@ -329,7 +329,7 @@
                value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, METHOD_DEF, CTOR_DEF, VARIABLE_DEF"/>
     </module>
     <module name="JavadocMethod">
-      <property name="scope" value="public"/>
+      <property name="accessModifiers" value="public"/>
       <property name="allowMissingParamTags" value="true"/>
       <property name="allowMissingReturnTag" value="true"/>
       <property name="allowedAnnotations" value="Override, Test"/>
