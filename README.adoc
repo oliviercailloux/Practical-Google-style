@@ -1,7 +1,5 @@
 = Practical Google style
 
-// TODO follow https://github.com/google/google-java-format/issues/646 and https://github.com/google/google-java-format/issues/647 and decide to adopt or document.
-
 Configuration files and practical tips and tricks to configure your Java project so as to apply (a slightly modified version of) the https://google.github.io/styleguide/javaguide.html[Google Java Style Guide].
 
 This repository provides a https://checkstyle.org/[Checkstyle] https://github.com/oliviercailloux/Practical-Google-style/blob/master/Relaxed%20google%20checks.xml[configuration file]; instructions for configuring your (Maven) POM (see below); and an Eclipse formatter https://github.com/oliviercailloux/Practical-Google-style/blob/master/eclipse-java-google-style%20patched.xml[configuration file] together with some https://github.com/oliviercailloux/Practical-Google-style/blob/master/Eclipse.adoc[related instructions].
