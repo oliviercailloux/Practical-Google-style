@@ -4,6 +4,8 @@ Configuration files and practical tips and tricks to configure your Java project
 
 This repository provides a https://checkstyle.org/[Checkstyle] https://github.com/oliviercailloux/Practical-Google-style/blob/master/Practical%20Google%20checks.xml[configuration file]; instructions for configuring your (Maven) POM (see below); and an Eclipse formatter https://github.com/oliviercailloux/Practical-Google-style/blob/master/eclipse-java-google-style%20patched.xml[configuration file] together with some https://github.com/oliviercailloux/Practical-Google-style/blob/master/Eclipse.adoc[related instructions].
 
+You might also be interested in these https://github.com/oliviercailloux/java-course/blob/master/Style/Code.adoc[style guidelines].
+
 == Maven
 Add the plugin `maven-checkstyle-plugin` to your POM, configured as in https://github.com/oliviercailloux/pom/blob/master/pom.xml#L38-L60[here], in order to fail your build in case of bad formatting. (If put directly into the `build` / `plugins` element instead of the `pluginManagement` element, the check will run https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html[by default] during the https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference[verify] phase.)
 
