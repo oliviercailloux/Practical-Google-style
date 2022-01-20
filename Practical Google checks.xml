@@ -33,7 +33,8 @@
            default="checkstyle-suppressions.xml" />
     <property name="optional" value="true"/>
   </module>
-
+  <module name="SuppressWarningsFilter" />
+  
   <!-- Checks for whitespace                               -->
   <!-- See http://checkstyle.org/config_whitespace.html -->
   <module name="FileTabCharacter">
@@ -47,6 +48,7 @@
   </module>
 
   <module name="TreeWalker">
+    <module name="SuppressWarningsHolder" />
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
