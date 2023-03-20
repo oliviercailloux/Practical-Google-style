@@ -10,12 +10,12 @@ You might also be interested in these https://github.com/oliviercailloux/java-co
 Add the plugin `maven-checkstyle-plugin` to your POM, configured as in https://github.com/oliviercailloux/pom/blob/master/pom.xml#L38-L60[here], in order to fail your build in case of bad formatting. (If put directly into the `build` / `plugins` element instead of the `pluginManagement` element, the check will run https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html[by default] during the https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference[verify] phase.)
 
 == Checkstyle configuration file
-The Checkstyle configuration file provided here is a modified version of their https://github.com/oliviercailloux/Practical-Google-style/blob/original-config/google_checks.xml[configuration file] for Google Style Guide.
+The Checkstyle configuration file provided here is a modified version of https://github.com/oliviercailloux/Practical-Google-style/blob/original-config/google_checks.xml[their configuration file] for Google Style Guide.
 
 .Modifications
 [%collapsible]
 ====
-I initially imported the Checkstyle  (from the Checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources]), then https://github.com/oliviercailloux/Practical-Google-style/compare/original-config..master#diff-3ec4477dcb9822e385df285c83b0e83b6d204b89447437359ae2a364f842396a[modified] the file manually. 
+I initially imported the Checkstyle (from the Checkstyle https://github.com/checkstyle/checkstyle/blob/33fd070957c8a5585479f84a5cb9b35598de8c64/src/main/resources/google_checks.xml[resources]), then https://github.com/oliviercailloux/Practical-Google-style/compare/original-config..master#diff-3ec4477dcb9822e385df285c83b0e83b6d204b89447437359ae2a364f842396a[modified] the file manually. 
 
 * https://checkstyle.org/config_misc.html#Indentation[`braceAdjustment`] disabled because https://github.com/checkstyle/checkstyle/issues/9326[also applies] to braces at the start of a line and after an end of statement, which I do not want.
 * Put the global severity level at the Checkstyle default (`error`, instead of `warning` which was explicitly set in the original google checks configuration file), because I consider that the build should fail in case of style error.
