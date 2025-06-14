@@ -30,7 +30,7 @@ The Checkstyle default configuration forbids all of this.
 The modification tolerates all one-letter abbreviations (equivalently, considers that all one-letter words exist). 
 This also requires to https://github.com/oliviercailloux/Practical-Google-style/blob/main/Practical%20Google%20checks.xml#L184-L213[allow] for the second letter to be uppercase when using camel case.
 ** Incidentally, this also permits the name `TOptional` with a `T` prefix for a “Throwable” generalization of the class (which arguably does not comply with the GJSG but I find this a useful deviation).
-* I am hesitant about `OverloadMethodsDeclarationOrder` because it does not distinguish methods according to their qualifier (`static` or `private` or `public`, see https://github.com/checkstyle/checkstyle/issues/3770[issue 3770]). I am ready to buy accept that static and non static methods should have different names to avoid confusion. Also, it seems to be effectively https://github.com/google/styleguide/issues/932[mandated] by GJSG.
+* I kept `OverloadMethodsDeclarationOrder` for now but with some hesitation because it does not distinguish methods according to their qualifier (`static` or `private` or `public`, see https://github.com/checkstyle/checkstyle/issues/3770[issue 3770]). I am ready to accept that static and non static methods should have different names to avoid confusion. Also, it seems to be effectively https://github.com/google/styleguide/issues/932[mandated] by GJSG.
 
 I renamed the file to distinguish it from the original style.
 ====
